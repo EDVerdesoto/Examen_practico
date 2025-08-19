@@ -1,7 +1,7 @@
 
 function calcWeightedGrade(items) {
     if (!Array.isArray(items)) {
-        throw new TypeError("Items debe ser un arreglo");
+        throw new TypeError('Items debe ser un arreglo');
     }
 
     let peso_total = 0;
@@ -33,14 +33,14 @@ function calcWeightedGrade(items) {
 }
 
 function percentile(p, values){
-    if (typeof p !== "number" || p < 0 || p > 100) {
-        throw new RangeError("Percentil debe estar en [0,100]");
+    if (typeof p !== 'number' || p < 0 || p > 100) {
+        throw new RangeError('Percentil debe estar en [0,100]');
     }
     if (!Array.isArray(values) || values.length === 0) {
-        throw new TypeError("Values debe ser un arreglo no vacío");
+        throw new TypeError('Values debe ser un arreglo no vacío');
     }
     values.forEach((v, idx) => {
-        if (typeof v !== "number") {
+        if (typeof v !== 'number') {
             throw new TypeError(`El elemento en índice ${idx} no es un número`);
         }
     });
