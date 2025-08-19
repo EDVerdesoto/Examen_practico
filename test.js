@@ -38,7 +38,7 @@ describe('Cacluladora', () => {
 // percentile(50,[1,2,3,4]) → 2.00 (nearest-rank)
 
 describe('Percentile', () => {
-    test('El percentil 0 debe ser el menor (1)', () => {y;
+    test('El percentil 0 debe ser el menor (1)', () => {;
         
         expect(percentile(0,[1,2,3])).toBe(1.00);
     });
