@@ -33,3 +33,6 @@ jobs:
       - name: Simular despliegue
         run: | 
           echo "Despliegue simulado: La aplicación pasó lint y pruebas correctamente."
+      
+      - name: Cobertura 
+        run: npx jest --coverage

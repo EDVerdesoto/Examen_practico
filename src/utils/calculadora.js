@@ -16,10 +16,10 @@ function calcWeightedGrade(items) {
             throw new TypeError(`Score y Weight deben ser números en el índice ${idx}`);
         }
         if (score < 0 || score > 100) {
-            throw new RangeError(`score fuera de rango (0–100) en índice ${idx}`);
+            throw new RangeError(`score fuera de rango (0–100)`);
         }
         if (weight < 0 || weight > 1) {
-            throw new RangeError(`weight fuera de rango (0–1) en índice ${idx}`);
+            throw new RangeError(`weight fuera de rango (0–1) `);
         }
         peso_total += weight;
         nota += score * weight;
