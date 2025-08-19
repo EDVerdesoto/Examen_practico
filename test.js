@@ -9,7 +9,7 @@ describe('Cacluladora', () => {
     });
     test('Items debe ser un arreglo', () => {
         expect(() => calcWeightedGrade('no es un arreglo')).toThrow('Items debe ser un arreglo');
-    })
+    });
     test('El elemento no es un objeto', () => {
         const items = [null];
         expect(() => calcWeightedGrade(items)).toThrow('El elemento en índice 0 no es un objeto');
@@ -31,14 +31,15 @@ describe('Cacluladora', () => {
         expect(() => calcWeightedGrade(items)).toThrow('weight fuera de rango (0–1)');
     });
 
-})
+});
 
 
 // percentile(0,[1,2,3]) → 1.00 ; percentile(100,[1,2,3]) → 3.00
 // percentile(50,[1,2,3,4]) → 2.00 (nearest-rank)
 
 describe('Percentile', () => {
-    test('El percentil 0 debe ser el menor (1)', () => {
+    test('El percentil 0 debe ser el menor (1)', () => {y;
+        
         expect(percentile(0,[1,2,3])).toBe(1.00);
     });
     test('El percentil 100 debe ser el mayor (3)', () => {
