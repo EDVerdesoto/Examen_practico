@@ -8,11 +8,11 @@ function calcWeightedGrade(items) {
     let nota = 0;
     
     items.forEach((item, idx) => {
-        if(typeof item !== "object" || item === null) {
+        if(typeof item !== 'object' || item === null) {
             throw new TypeError(`El elemento en índice ${idx} no es un objeto`);
         }
         const { score, weight } = item;
-        if(typeof score !== "number" || typeof weight !== "number") {
+        if(typeof score !== 'number' || typeof weight !== 'number') {
             throw new TypeError(`Score y Weight deben ser números en el índice ${idx}`);
         }
         if (score < 0 || score > 100) {
@@ -26,7 +26,7 @@ function calcWeightedGrade(items) {
     });
 
     if (Math.abs(peso_total - 1) > 0.001) {
-        throw new RangeError("La suma de los pesos debe ser 1");
+        throw new RangeError('La suma de los pesos debe ser 1');
     }
 
     return Number(nota.toFixed(2));
