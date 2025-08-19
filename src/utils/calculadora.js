@@ -51,3 +51,8 @@ function percentile(p, values){
     if (rank > N) return Number(values[N - 1].toFixed(2));
     return Number(values[rank - 1].toFixed(2));
 }
+
+module.exports = {
+    calcWeightedGrade,
+    percentile
+};
