@@ -13,7 +13,7 @@ function calcWeightedGrade(items) {
         }
         const { score, weight } = item;
         if(typeof score !== "number" || typeof weight !== "number") {
-            throw new TypeError(`Score y Weight deben ser números en el índice ${idx}`);
+            throw new TypeError(`Score y Weight deben ser números en el índice ${idx}`),
         }
         if (score < 0 || score > 100) {
             throw new RangeError(`score fuera de rango (0–100) en índice ${idx}`);
